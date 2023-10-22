@@ -112,6 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
+            //UUID are unique values because of that i dont need a for loop
             let result = try context.fetch(fetchRequest).first as! NSManagedObject
             context.delete(result)
             
